@@ -1,0 +1,25 @@
+def authenticate(name, classmates):
+    if name in classmates:
+        return True
+    else:
+        return False
+def get_info(name):
+    info = {
+"Сергей": "Дабстепович.",
+"Александр": "Кусок металла.",
+"Аскар": "Дндешович."
+}
+    if name in info:
+        return info[name]
+    else:
+        return "Информация о данном одногруппнике отсутствует."
+
+classmates = "Алексей, Ольга, Сергей"
+
+input_name = input("Введите свое имя: ")
+
+if authenticate(input_name, classmates):
+    print("Успешный вход!")
+    print("Информация о вас: ", get_info(input_name))
+else:
+    print("Ваше имя не найдено в базе.")
